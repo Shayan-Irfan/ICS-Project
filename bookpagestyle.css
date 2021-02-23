@@ -6,19 +6,36 @@
 }
 
 header {
-    line-height: 100px;
-    text-align: center;
+    line-height: 80px;
     border-bottom: 1px solid black;
+    padding: 0px 30px;
+}
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.containerHeader > .right > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.containerHeader > .right > ul > li{
+    list-style: none;
+    display: inline-block;
 }
 
 header h2 {
     font-size: 25px;
+    font-weight: bolder;
 }
 
 #book-heading {
     text-align: center;
     font-size: 25px;
     margin-top: 95px;
+    font-weight: bolder;
 }
 
 #book-container {
@@ -36,7 +53,16 @@ header h2 {
 
 img {
     width: 250px;
+    height: auto;
     margin-bottom: 7px;
+    object-fit: contain;
+    transition: 0.5s ease-in-out;
+}
+img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 16px 28px -3px rgba(0,0,0,0.71);
+    margin-bottom: 30px;
 }
 
 .auth-name {
@@ -66,7 +92,7 @@ img {
     position: relative;
     display: block;
     font-size: 23px;
-    color: #51B5CD;
+    color: rgb(236, 236, 41);
 }
 
 .rating label::after {
@@ -76,7 +102,7 @@ img {
     top: 0;
     display: block;
     font-size: 23px;
-    color: #51B5CD;
+    color: rgb(236, 236, 41);
     opacity: 0;
     /* text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); */
 }
@@ -106,6 +132,10 @@ footer div h3 {
     font-size: 20px;
 }
 
+.creator{
+    color: rgb(235, 235, 67);
+}
+
 @media(max-width: 1500px) {
     #book-container div {
         width: 400px;
@@ -129,5 +159,15 @@ footer div h3 {
 
     #book-container div {
         width: 270px;
+    }
+}
+
+@media(max-width: 396px){
+    .containerHeader{
+        display: block;
+        text-align: center;
+    }
+    header{
+        line-height: 50px;
     }
 }
